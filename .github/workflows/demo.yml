@@ -13,6 +13,15 @@ jobs:
    
    - name : run a sampel
      run : echo "hello word"
+
+  deploy:
+     runs-on: ubuntu-latest
+     steps: 
+
+         -uses: actions/download-artifact@4
+          with: 
+              name: build-artifact
+              path: ${{github.workspace}}
    
 
      

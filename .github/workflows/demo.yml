@@ -1,0 +1,18 @@
+name: demo-actions
+
+on:
+  push:
+     branches: main
+
+
+     jobs:
+         build:
+         runs-on: umbantu-latest
+         steps: 
+         - uses: actions/checkout@v4
+         
+         - name : run a sampel
+           run : echo hello word
+         
+
+     
